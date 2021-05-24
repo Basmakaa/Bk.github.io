@@ -100,12 +100,16 @@ a:hover .logo {
   
 }
 .screenshot {
-  width:70%;
   padding:20px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   text-align:center;
+}
+a:hover .screenshot {
+  opacity: 0.8;
+  transform: scale(1.05);
+  
 }
 
 fieldset {
