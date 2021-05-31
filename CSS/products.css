@@ -1,5 +1,5 @@
 div.card {
-    /* float: left; */
+
     width: 300px;
     height: 250px;
     margin: 12px;
@@ -13,12 +13,6 @@ div.card {
 div.card-body {
     text-align: left;
 }
-/* 
-    pour le size de l'ecran jutilise du code de https://www.w3schools.com/cssref/css3_pr_mediaquery.asp 
-    pour le auto-sizing de la grid j'utilise du code de https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
-    Code for grids by w3School https://www.w3schools.com/css/css_grid.asp 
-    Edited by Thierry Laprade #300067788 
-*/
 div.products {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -45,7 +39,7 @@ div.products {
     }
 }
 
-/* 1430 = 4 */
+
 
 label.card {
     font-size: large;

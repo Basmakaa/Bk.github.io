@@ -1,9 +1,5 @@
 /* Une portion de ce code a été pris de https://github.com/carolinebarriere/carolinebarriere.github.io/tree/master/SEG3125-Module2-Grocery (Caroline Barriere) */
 
-// Array of products, each product is an object with different fieldset
-// A set of ingredients should be added to products		 
-
-//Note that i went on the metro grecery store web site for the prices on the items. https://www.metro.ca/en/online-grocery/
 var products = [
 	{
 		name: "Brocoli",
@@ -12,7 +8,7 @@ var products = [
 		organic: true,
 		vegan: true,
 		dairyF: true,
-		price: 1.99
+		price: 1.5
 	},
 	{
 		name: "Bread",
@@ -21,7 +17,7 @@ var products = [
 		organic: false,
 		vegan: false,
 		dairyF: false,
-		price: 2.35
+		price: 2.00
 	},
 	{
 		name: "Salmon",
@@ -30,7 +26,7 @@ var products = [
 		organic: false,
 		vegan: false,
 		dairyF: true,
-		price: 9.99
+		price: 9.97
 	},
 	{
 		name: "Bananas",
@@ -39,7 +35,7 @@ var products = [
 		organic: true,
 		vegan: true,
 		dairyF: true,
-		price: 2.46
+		price: 2.43
 	},
 	{
 		name: "Tomatoe",
@@ -48,17 +44,9 @@ var products = [
 		organic: true,
 		vegan: true,
 		dairyF: true,
-		price: 1.32
+		price: 1.21
 	},
-	{
-		name: "Raspberries",
-		vegetarian: true,
-		glutenFree: true,
-		organic: false,
-		vegan: true,
-		dairyF: true,
-		price: 3.99
-	},
+	
 	{
 		name: "Onion",
 		vegetarian: true,
@@ -66,7 +54,7 @@ var products = [
 		organic: false,
 		vegan: true,
 		dairyF: true,
-		price: 1.65
+		price: 1.60
 	},
 	{
 		name: "Milk",
@@ -75,7 +63,7 @@ var products = [
 		organic: false,
 		vegan: false,
 		dairyF: false,
-		price: 4.49
+		price: 4.35
 	},
 	{
 		name: "Eggs",
@@ -96,7 +84,7 @@ var products = [
 		price: 4.49
 	},
 	{
-		name: "Shredded Cheese",
+		name: "Cheese",
 		vegetarian: true,
 		glutenFree: true,
 		organic: false,
@@ -105,7 +93,7 @@ var products = [
 		price: 5.99
 	},
 	{
-		name: "Whole Chicken",
+		name: "Chicken",
 		vegetarian: false,
 		glutenFree: true,
 		organic: true,
@@ -114,13 +102,13 @@ var products = [
 		price: 13.14
 	},
 	{
-		name: "T-Bone Steak",
+		name: "Steak",
 		vegetarian: false,
 		glutenFree: true,
 		organic: false,
 		vegan: false,
 		dairyF: true,
-		price: 14.78
+		price: 14.78 
 	},
 	{
 		name: "Bacon",
@@ -133,12 +121,18 @@ var products = [
 	}
 ];
 
-// given restrictions provided, make a reduced list of products
-// prices should be included in this list, as well as a sort based on price
-// Restriction is an array of boolean values : [Vegetarian, GlutenFree, organic, Vegan, Dairy Free]
+function getTotalPrice(chosenProducts) {
+	totalPrice = 0;
+	for (let index=0; index<products.length; index+=1) {
+		if (chosenProducts.indexOf(products[index].name) > -1){
+			totalPrice += products[index].price;
+		}
+	}
 
-//Si une restriction est en place et l'item ne repond pas au exigence, on le skip (avec continue)
-//s'il remplie toute les condition, on l'ajoute a la liste. 
+	totalPrice = Math.round(totalPrice * 100) / 100;
+	return totalPrice;
+}
+
 
 function restrictListProducts(prods, restriction) {
 	let restrictedProduct = [];
@@ -166,17 +160,4 @@ function restrictListProducts(prods, restriction) {
 		restrictedProduct.push(prods[i]);
 	}
 	return restrictedProduct;
-}
-
-// Calculate the total price of items, with received parameter being a list of products
-function getTotalPrice(chosenProducts) {
-	totalPrice = 0;
-	for (let index=0; index<products.length; index+=1) {
-		if (chosenProducts.indexOf(products[index].name) > -1){
-			totalPrice += products[index].price;
-		}
-	}
-	// I was getting a weird price bug here sometimes so this line is needed
-	totalPrice = Math.round(totalPrice * 100) / 100;
-	return totalPrice;
 }
