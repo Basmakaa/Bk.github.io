@@ -1,0 +1,129 @@
+/* Une portion de ce code a été pris de https://github.com/carolinebarriere/carolinebarriere.github.io/tree/master/SEG3125-Module2-Grocery (Caroline Barriere) */
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .tablinks {
+    font-size: larger;
+  }
+
+  body {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    background-color: #e2edff;
+    line-height: 125%;
+    width:100%;
+    padding: 0;
+    min-height: 100%;
+  
+  }
+  
+  h1, h2, h3, a {
+    font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+  
+  }
+  
+  h1 {
+    font-size: x-large;
+    background-color: navy;
+    color: white;
+    padding-top: 2em;
+    padding-bottom: .2em;
+    padding-left: .8em;
+    margin: 0;
+    background: navy ;
+  }
+  
+  h2 {
+    color: navy;
+    font-size: 140%;
+    font-weight: normal;
+    padding-top: 15px;
+  }
+  
+  li {
+    font-size: small;
+    list-style-type: none;
+  }
+  
+  p {
+    font-size: 16px;
+    color: navy;
+  }
+  
+  #tagline p {
+    font-style: italic;
+    font-family: Georgia, Times, serif;
+    border-top: 3px solid #7da5d8;
+    border-bottom: 3px solid #7da5d8;
+    padding-top: .2em;
+    padding-bottom: .2em;
+    padding-left: .8em;
+    margin: 0;
+    background: #bed8f3 ;
+  }
+  
+  em {
+    text-transform: uppercase;
+  }
+  
+  
+  a:link {
+    color: navy;
+    font-size: 110%;
+    font-weight: normal;
+  }
+  
+  a:hover {
+    text-decoration: none;
+    color: white;
+    background-color: navy;
+  }
+  
+  
+  h2, ul {
+    margin-top: 15px;
+  }
+  
+  header {
+    border-top: 3px solid #7da5d8;
+  }
+  
+  

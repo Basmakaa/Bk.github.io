@@ -1,153 +1,92 @@
+<!-- Une portion de ce code a été pris de https://github.com/carolinebarriere/carolinebarriere.github.io/tree/master/SEG3125-Module2-Grocery (Caroline Barriere) -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>MySurevey.com</title>
-  <meta charset="utf-8" />
-  
-  <link href="style1.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-  <header>
-    <div id="sitebranding">
-      <h1>MySurvey.com</h1>
-    </div>
-    <div id="tagline">
-      <p> Welcome to MySurvey.com users ! </p>
-    </div>
-  </header>
-  <div id="bodycontent">
-    <a href="https://www.giatecscientific.com/products/concrete-sensors/smartbooster/">
-    <img class="logo" src="http://giatec.staging.wpengine.com/wp-content/uploads/2018/02/giatec_logo_white-2-300x91-1.png"></img>
-    </a>
-    <a href="https://www.giatecscientific.com/products/concrete-sensors/smartbooster/">
-      <img class="screenshot" src="https://raw.githubusercontent.com/Basmakaa/Basmakaa.github.io/main/images/Picture1.png"></img>
-      </a>
-    <h2><a href="https://www.giatecscientific.com/products/concrete-sensors/smartbooster/">Giatec Scientific website</a> UI Survey</h2>
-    <p>To provide a better user experience, can you please fill the form below.</p>
-    <form action="" method="post" class="contact">
-      <fieldset class="contact_field">
-        <div>   
-          <label for="region" class="fixedwidth">What region are you in?</label> 
-          <select name="region" id="region" class="input">     
-            <option>Central Canada- Quebec, Ontario</option>
-            <option>The Prairie Provinces - Manitoba, Saskatchewan, Alberta.</option>  
-            <option>The West Coast - British Columbia.</option>     
-            <option>The North - Nunavut, Northwest Territories, Yukon Territory.</option>     
-            <option>The Atlantic Region - Newfoundland and Labrador, Prince Edward Island, Nova Scotia, New Brunswick.</option>    
-            <option>International (see details below)</option>
-          </select>
-        </div>
-        <legend>Contact info </legend>
-        <div>
-          <label for="contactname" class="fixedwidth">Name </label>
-          <input type="text" name="contactname" class="input" id="contactname" />
-        </div>
-        <div>
-          <label for="email" class="fixedwidth">Email Address</label>
-          <input type="text" name="email" class="input" id="email" />
-        </div>
-      </fieldset>
-    </form>
-    <form action="" method="post" class="contact">
-      <fieldset>
-        <legend>Questions </legend>
-        <div>
-          <p>What is the feature that you did like most on the UI and why ? </p>
-          <textarea name="details" id="details" cols="90" rows="1" class="input"></textarea>
-        </div>
-        <div>   
-          <p>What word would describe your experience driving through the UI</p>   
-          <input type="radio" name="satisfaction" id="verydesatisfied"  />   
-          <label for="verydesatisfied">Very Dissatisfied</label>
-          <br />   
-          <input type="radio" name="satisfaction" id="somehowdisatisfied"  />   
-          <label for="somehowdisatisfied">Somehow Dissatisfied</label>   
-          <br />   
-          <input type="radio" name="satisfaction" id="somehowsatisfied" />   
-          <label for="somehowsatisfied">Somehow Satisfied</label>   
-          <br />   
-          <input type="radio" name="satisfaction" id="Very Satisfied"  />   
-          <label for="Very Satisfied">Very Satisfied</label>
-        </div>
-      
-        <div>
-          <p>Select all the statements that you agree with</p>
-          <input type="checkbox" id="stat1" name="stat1" >
-          <label for="stat1">Use of terms throughout the system is consistent</label><br>
-        </div>
-        <div>
-          <div>
-          <input type="checkbox" id="stat2" name="stat2" >
-          <label for="stat2"> Prompts for inputs are clear</label><br>
-          </div>
-          <div>
-           
-          <input type="checkbox" id="stat3" name="stat3" >
-          <label for="stat3"> System always informs about the progress of the task</label>
-          </div>
-            <div>
-           <input type="checkbox" id="stat4" name="stat4" >
-           <label for="stat4">Error messages are helpful</label>
-          </div>
-        </div>
-        <div>   
-          <p>On a scale from 1 (most complex) to 10 (most easy), how would you describe the complexity of using the website ?</p>
-          <label for="region" class="fixedwidth"></label> 
-          <select name="region" id="region" class="input">     
-            <option>1</option>
-            <option>2</option>  
-            <option>3</option>     
-            <option>4</option>     
-            <option>5</option>    
-            <option>6</option>
-            <option>7</option>     
-            <option>8</option>     
-            <option>9</option>    
-            <option>10</option>
-          </select>
-        </div>
-          <div>   
-            <p>What is your opinion about the organization of information on the screen ?</p>   
-            <input type="radio" name="organisation" id="veryconfusing"  />   
-            <label for="veryconfusing">Very Confusing</label>
-            <br />   
-            <input type="radio" name="organisation" id="alittleconfusing"  />   
-            <label for="alittleconfusing">A little Confusing</label>   
-            <br />   
-            <input type="radio" name="organisation" id="a litle clear" />   
-            <label for="alittleclear">A little Clear</label>   
-            <br />   
-            <input type="radio" name="organisation" id="never"  />   
-            <label for="veryclear">Very Clear</label>
-          </div>
-        
-        <div>
-          <p>Please provide any other details or comments about your feedback.</p>
-          <label for="details" class="fixedwidth">(as much as you think
-          we'll need!)</label>
-          <textarea name="details" id="details" cols="30" rows="7" class="input"></textarea>
-        </div>
-          <div>
-          <p>MySurvey.com may share information you give us here with other
-              like-minded people or web sites to conduct the study. Please confirm if you
-              are happy for us to do this.</p>   
-          <input type="checkbox" name="publicize" id="publicize" checked="checked" />   
-          <label for="publicize">I am happy for this survey to be publicized outside of and 
-          beyond MySurvey.com, where possible</label>
-        </div>
-        <div class="buttonarea">    
-          <input type="submit" value="Submit" /> 
-        </div>
-      </fieldset>
-    </form>
-    <p>If you need to get in touch urgently, please call MySurvey.com on 8736880417. For anything else, please <a href="mailto:MySUrvey.com">drop us a line by email</a>.</p>
-    
-  </div><!-- end of bodycontent div -->
-  <footer>
-    <div class="footer">
-      ©2021 MySurvey.com. All Right Reserved.
-    </div>
-  </footer>
-</body>
+    <script src="JS/groceries.js"></script>
+    <script src="JS/main.js"></script>
 
+  <title>BK Grocery Store</title>
+
+	<!-- This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp -->
+    <link href="CSS/style.css" rel="stylesheet" type="text/css">
+    <link href="CSS/client.css" rel="stylesheet" type="text/css">
+    <link href="CSS/products.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+<body onload="populateListProductChoices([false, false, false],'displayProduct')">
+
+    <h1 class="center">BK Grocery Store</h1>
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+</div>
+
+
+
+<div id="Client" class="tabcontent">
+  <h3>Client Information</h3>
+  <p>Tell us a bit about you.</p>
+
+
+  
+  <fieldset id="dietSelect" name="dietSelect" onchange="populateListProductChoices([document.getElementById('Vegetarian').checked,  document.getElementById('Gluten').checked,  document.getElementById('Organic').checked,  document.getElementById('Vegan').checked,  document.getElementById('DairyF').checked], 'displayProduct')">
+        <legend>Choose a Category:</legend>
+        <ul>
+          <li>
+            <input type="checkbox" name="Vegetarian" id="Vegetarian">
+            <label for="Vegetarian">Vegetarian</label>
+          </li>
+          <li>
+            <input type="checkbox" name="Gluten" id="Gluten">
+            <label for="Gluten">Gluten Free</label>
+          </li>
+          <li>
+            <input type="checkbox" name="Organic" id="Organic">
+            <label for="Organic">Organic</label>
+          </li>
+          <li>
+            <input type="checkbox" name="Vegan" id="Vegan">
+            <label for="Vegan">Vegan</label>
+          </li>
+          <li>
+            <input type="checkbox" name="DairyF" id="DairyF">
+            <label for="DairyF">Dairy Free</label>
+          </li>
+        </ul>
+    </fieldset>
+</div>
+
+
+<!-- Tab content PRODUCTS -->
+<div id="Products" class="tabcontent">
+  <h2>Your targeted products</h2>
+  <h4>We preselected products based on your restrictions.</h4>
+
+  <div class="products" id="displayProduct"></div>
+         
+  <button id="addCart" type="button" class="block" onclick="selectedItems()">
+  Add selected items to cart.
+  </button>
+</div>
+
+
+<!-- Tab content CART -->
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <p>Here is your cart.</p>
+  <div id="displayCart"></div>
+</div>
+
+<hr>
+<div class="center">
+  <p class="sign">By BK </p>
+ 
+</div>
+
+
+
+</body>
 </html>
