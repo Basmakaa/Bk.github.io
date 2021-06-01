@@ -51,7 +51,7 @@ function populateListProductChoices(slct1, slct2) {
 
 		var image = document.createElement("img");
 		image.className  = "card";
-		image.src = `images/${optionArray[i].name}.png`;
+		image.src = "images/${optionArray[i].name}.jpg";
 		image.alt = optionArray[i].name;
 		divCard.appendChild(image);
 
@@ -126,7 +126,7 @@ function populateCartWithProduct(product) {
 
 	var image = document.createElement("img");
 	image.className  = "card";
-	image.src = `images/${product.name}.jpg`;
+	image.src = "images/${product.name}.jpg";
 	image.alt = product.name;
 	divCard.appendChild(image);
 
