@@ -1,91 +1,47 @@
-<!-- Une portion de ce code a été pris de https://github.com/carolinebarriere/carolinebarriere.github.io/tree/master/SEG3125-Module2-Grocery (Caroline Barriere) -->
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="JS/groceries.js"></script>
-    <script src="JS/main.js"></script>
-
-  <title>BK Grocery Store</title>
-    <link href="CSS/products.css" rel="stylesheet" type="text/css">
-    <link href="CSS/style.css" rel="stylesheet" type="text/css">
-    <link href="CSS/client.css" rel="stylesheet" type="text/css">
-    
-
-  </head>
-
-<body onload="populateListProductChoices([false, false, false],'displayProduct')">
-
-    <h1 class="center">BK Grocery Store</h1>
-<!-- Tab links, each one with an onclick event associated with it -->
-<div class="tab">
-  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
-  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
-</div>
-
-
-
-<div id="Client" class="tabcontent">
-  <h3>Client Information</h3>
-  <p>Tell us a bit about you.</p>
-
-
-  
-  <fieldset id="dietSelect" name="dietSelect" onchange="populateListProductChoices([document.getElementById('Vegetarian').checked,  document.getElementById('Gluten').checked,  document.getElementById('Organic').checked,  document.getElementById('Vegan').checked,  document.getElementById('DairyF').checked], 'displayProduct')">
-        <legend>Choose all that applies for you:</legend>
-        <ul>
-          <li>
-            <input type="checkbox" name="Vegetarian" id="Vegetarian">
-            <label for="Vegetarian">Vegetarian</label>
-          </li>
-          <li>
-            <input type="checkbox" name="Gluten" id="Gluten">
-            <label for="Gluten">Gluten Free</label>
-          </li>
-          <li>
-            <input type="checkbox" name="Organic" id="Organic">
-            <label for="Organic">Organic</label>
-          </li>
-          <li>
-            <input type="checkbox" name="Vegan" id="Vegan">
-            <label for="Vegan">Vegan</label>
-          </li>
-          <li>
-            <input type="checkbox" name="DairyF" id="DairyF">
-            <label for="DairyF">Dairy Free</label>
-          </li>
-        </ul>
-    </fieldset>
-</div>
-
-
-<!-- Tab content PRODUCTS -->
-<div id="Products" class="tabcontent">
-  <h2>Your targeted products</h2>
-  <h4>We preselected products based on your restrictions.</h4>
-
-  <div class="products" id="displayProduct"></div>
-         
-  <button id="addCart" type="button" class="block" style="text-align:center" onclick="selectedItems()">
-  Add selected items to cart.
-  </button>
-</div>
-
-
-<!-- Tab content CART -->
-<div id="Cart" class="tabcontent">
-  <h3>Cart</h3>
-  <p>Here is your cart.</p>
-  <div id="displayCart"></div>
-</div>
-
-<hr>
-<div class="center">
-  <p class="sign">By BK </p>
- 
-</div>
-
-
-
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+<body onload="makeRestrictList('restrictionsOptions');">
+    <header>
+        <!-- Title and header-->
+    </header>
+    <h1>BK Grocery STore</h1>
+    <section id="filters">
+        <!-- Restrictions choose -->
+        <h3>Filter your products before choosing a category</h3>
+        <div id="restrictionsOptions"></div>
+        
+    </section>
+    <section class="maintab" id="categories">
+        <!-- Search for categories -->
+        <h3>Categories</h3>
+        <div class="cat" onclick="makeHtmlProductsList(getProductsList('Fruits'),'prodNav'); openProdDisplay('products'); makeNav('Fruits','breadcrumbs');"><h5>Fruits</h5></div>
+        <div class="cat" onclick="makeHtmlProductsList(getProductsList('Vegetables'),'prodNav'); openProdDisplay('products'); makeNav('Vegetables','breadcrumbs');"><h5>Vegetables</h5></div> <!-- Call populate function with chose category -->
+        <div class="cat" onclick="makeHtmlProductsList(getProductsList('Meat and Fish'),'prodNav'); openProdDisplay('products'); makeNav('Meat and Fish','breadcrumbs');"><h5>Meat and Fish</h5></div>
+        <div class="cat" onclick="makeHtmlProductsList(getProductsList('Dairy'),'prodNav'); openProdDisplay('products'); makeNav('Dairy','breadcrumbs');"><h5>Dairy</h5></div>
+        <div class="cat" onclick="makeHtmlProductsList(getProductsList('Grocery'),'prodNav'); openProdDisplay('products'); makeNav('Grocery','breadcrumbs');"><h5>Grocery</h5></div>
+    </section>
+    <section class="maintab" id="products">
+        <div id="breadcrumbs"></div>
+        <!-- Search for products -->
+        <h3>Products available according to your preferences</h3>
+        <div id="prodNav"></div>
+    </section>
+    <div id="cartPanel">
+        <!-- My cart (slide panel) -->
+        <h3 id='cartTitle'>My cart's content</h3>
+        <button class="toggleCart" id="openCart" onclick="openCart();">Show Cart</button>
+        <button class="toggleCart" id="closeCart" onclick="closeCart();">Hide</button>
+        <div id = "myCart"></div>
+        <p>Total : <span id = "total"></span></p>
+        <button type = "button" id = "reset" onclick = "resetCart('myCart','total');">Reset cart</button>
+    </div>
+    <footer style="color:#FF7A2F">
+        By BK
+    </footer>
+    <script src="scripts/groceries.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
