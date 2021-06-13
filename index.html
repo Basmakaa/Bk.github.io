@@ -1,47 +1,307 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>BK Physiotherapy</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link href="index.css" rel="stylesheet">
 </head>
-<body onload="makeRestrictList('restrictionsOptions');">
+
+<body>
+
     <header>
-        <!-- Title and header-->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#"><img id="nav-logo" src='img/medical-logo.jpg' /></a>
+            <ul id="navbarItemsList" class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team">Our Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contactus">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <h1>BK Grocery STore</h1>
-    <section id="filters">
-        <!-- Restrictions choose -->
-        <h3>Filter your products before choosing a category</h3>
-        <div id="restrictionsOptions"></div>
-        
-    </section>
-    <section class="maintab" id="categories">
-        <!-- Search for categories -->
-        <h3>Categories</h3>
-        <div class="cat" onclick="makeHtmlProductsList(getProductsList('Fruits'),'prodNav'); openProdDisplay('products'); makeNav('Fruits','breadcrumbs');"><h5>Fruits</h5></div>
-        <div class="cat" onclick="makeHtmlProductsList(getProductsList('Vegetables'),'prodNav'); openProdDisplay('products'); makeNav('Vegetables','breadcrumbs');"><h5>Vegetables</h5></div> <!-- Call populate function with chose category -->
-        <div class="cat" onclick="makeHtmlProductsList(getProductsList('Meat and Fish'),'prodNav'); openProdDisplay('products'); makeNav('Meat and Fish','breadcrumbs');"><h5>Meat and Fish</h5></div>
-        <div class="cat" onclick="makeHtmlProductsList(getProductsList('Dairy'),'prodNav'); openProdDisplay('products'); makeNav('Dairy','breadcrumbs');"><h5>Dairy</h5></div>
-        <div class="cat" onclick="makeHtmlProductsList(getProductsList('Grocery'),'prodNav'); openProdDisplay('products'); makeNav('Grocery','breadcrumbs');"><h5>Grocery</h5></div>
-    </section>
-    <section class="maintab" id="products">
-        <div id="breadcrumbs"></div>
-        <!-- Search for products -->
-        <h3>Products available according to your preferences</h3>
-        <div id="prodNav"></div>
-    </section>
-    <div id="cartPanel">
-        <!-- My cart (slide panel) -->
-        <h3 id='cartTitle'>My cart's content</h3>
-        <button class="toggleCart" id="openCart" onclick="openCart();">Show Cart</button>
-        <button class="toggleCart" id="closeCart" onclick="closeCart();">Hide</button>
-        <div id = "myCart"></div>
-        <p>Total : <span id = "total"></span></p>
-        <button type = "button" id = "reset" onclick = "resetCart('myCart','total');">Reset cart</button>
-    </div>
-    <footer style="color:#FF7A2F">
-        By BK
-    </footer>
-    <script src="scripts/groceries.js"></script>
-    <script src="scripts/main.js"></script>
+
+    <main role="main">
+
+ 
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                   
+                    <img src="img/wallpaper.jpg" alt="Picture of All Star Hairstylists salon">
+                    <div class="container">
+                        <div id="companyTitle" class="carousel-caption text-left">
+                            <h1>BK Physiotherapy center</h1>
+                            <p><em>All your needs in rehabilitation under one roof.</em></p>
+                            <p>A world class team of over 19 therapists is here to take care of you quickly!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+
+            <!-- Services section -->
+            <section id="services">
+                <h2 class="sectionTitle">Services</h2>
+                <div class="album py-5 bg-light">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-md-4">
+                                <div class="card mb-4 box-shadow">
+                                    
+                                    <img class="card-img-top" src="img/bikefittings.jpg" >
+                                    <div class="card-body">
+                                        <h3 class="card-text">Bike fittings</h3>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#formModal">Book appointment</button>
+                                            </div>
+                                            <small class="text-muted">$85/hour</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <div class="card mb-4 box-shadow">
+                                    
+                                    <img class="card-img-top" src="img/massage.jpg" >
+                                    <div class="card-body">
+                                        <h3 class="card-text">Massage Therapy.</h3>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#formModal">Book appointment</button>
+                                            </div>
+                                            <small class="text-muted">$65/hour</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <div class="card mb-4 box-shadow">
+                                   
+                                    <img class="card-img-top" src="img/acupuncture.jpg" >
+                                    <div class="card-body">
+                                        <h3 class="card-text">Acupuncture Therapy</h3>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#formModal">Book appointment</button>
+                                            </div>
+                                            <small class="text-muted">$110/hour</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card mb-4 box-shadow">
+                                    <img class="card-img-top" src="img/intrmusculatsimulation.jpg" >
+                                    <div class="card-body">
+                                        <h3 class="card-text">IMS</h3>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#formModal">Book appointment</button>
+                                            </div>
+                                            <small class="text-muted">$110/hour</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card mb-4 box-shadow">
+                                    <img class="card-img-top" src="img/hydrotherapy.jpg" alt="Hair colouring">
+                                    <div class="card-body">
+                                        <h3 class="card-text">Hydrotherapy</h3>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#formModal">Book appointment</button>
+                                            </div>
+                                            <small class="text-muted">$90/hour</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Book appointment form -->
+            <div class="modal fade" id="formModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="formName"><b>Name</b></label>
+                                    <input class="form-control" id="formName" placeholder="Your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="formPhone"><b>Phone</b></label>
+                                    <input class="form-control" id="formPhone" type="tel" placeholder="Your phone number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="formDate"><b>Date</b></label>
+                                    <input class="form-control" id="formDate" type="date">
+                                </div>
+                                <div class="form-group">
+                                    <label for="formTime"><b>Time</b></label>
+                                    <input class="form-control" id="formTime" type="time">
+                                </div>
+                                <div class="form-group">
+                                    <label><b>Services</b></label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="formHaircut">
+                                        <label class="form-check-label" for="Bike fittings">Bike fittings</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="formStyling">
+                                        <label class="form-check-label" for="formStyling">Massage Therapy</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="formColouring">
+                                        <label class="form-check-label" for="formColouring">Acupuncture</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="formColouring">
+                                        <label class="form-check-label" for="formColouring">IMS</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="formColouring">
+                                        <label class="form-check-label" for="formColouring">Hydrotherapy</label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-outline-success float-right">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Team section -->
+            <section id="team">
+                <h2 class="sectionTitle">Our Team</h2>
+                <hr class="featurette-divider">
+                <div class="row featurette">
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading">Jake Prinston.</h2>
+                        <p class="lead">Originally from Johndoeland, Jake discovered a passion and natural skill for healtch care and more specifically massage. He earned his Physiotherapy degree at the University of Ottawa and has now accumulated over 25 years of professional experience.</p>
+                    </div>
+                    <div class="col-md-5">
+                        <!-- Image obtained from http://clipart-library.com/free/man-silhouette-vector.html -->
+                        <img class="featurette-image img-fluid mx-auto" src="img/doctor.png" alt="Bio about John Doe">
+                    </div>
+                </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette">
+                    <div class="col-md-7 order-md-2">
+                        <h2 class="featurette-heading">Morgan Dave.</h2>
+                        <p class="lead">Morgan studied at the world-renowned All Star University. She has over 25 years of experience and specializes in a variety of services, including acupuncture and IMS.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                        <!-- Image obtained from https://www.pinterest.ca/pin/534169205776378637/ -->
+                        <img class="featurette-image img-fluid mx-auto" src="img/nurs.png" alt="Bio about Jane Smith">
+                    </div>
+                </div>
+                <hr class="featurette-divider">
+                <div class="row featurette">
+                    <div class="col-md-7">
+                        <h2 class="featurette-heading">John Doe.</h2>
+                        <p class="lead">John discovered a passion and natural skill for hydrotherapy at a very young age. He earned his hydrotherapydegree at the University of Paris and has now accumulated over 12 years of professional experience.</p>
+                    </div>
+                    <div class="col-md-5">
+                        <!-- Image obtained from http://clipart-library.com/free/man-silhouette-vector.html -->
+                        <img class="featurette-image img-fluid mx-auto" src="img/doctor.png" alt="Bio about John Doe">
+                    </div>
+                </div>
+                <hr class="featurette-divider">
+            </section>
+
+
+            <!-- Contact Us section -->
+            <section id="contactus">
+                <h2 class="sectionTitle">Contact Us</h2>
+                <div class="contactus py-5 bg-light">
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-body">
+                                <h4 class="card-text"><i class="fa fa-map-marker"></i> Address</h4>
+                                <p>312 rue champlain</p>
+                                <p>Gatineau, QUebec, Canada</p>
+                                <p>J8D4F2</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-body">
+                                <h4 class="card-text"><i class="fa fa-phone"></i> Hours of Operation</h4>
+                                <p>Tuesday to SUnday</p>
+                                <p>7:00am - 9:00pm</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            <div class="card-body">
+                                <h4 class="card-text"><i class="fa fa-envelope"></i> Contact Us</h4>
+                                <p>873 688 0417</p>
+                                <p>contact@bkphysiotherapy.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <hr class="featurette-divider">
+        </div>
+
+        <!-- Footer -->
+        <footer class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2021 BK Physiotherapy. All Right reserved. Website designed by BK.</p>
+        </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
 </body>
+
 </html>
