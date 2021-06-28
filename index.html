@@ -160,11 +160,11 @@
                             <form>
                                 <div class="form-group">
                                     <label for="formName"><b>Name</b></label>
-                                    <input class="form-control" id="formName" placeholder="Your name">
+                                    <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter your name" title="Enter your full name">
                                 </div>
                                 <div class="form-group">
                                     <label for="formPhone"><b>Phone</b></label>
-                                    <input class="form-control" id="formPhone" type="tel" placeholder="Your phone number">
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="(XXX) XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Enter a phone number that we can reach you">
                                 </div>
                                 <div class="form-group">
                                     <label for="formDate"><b>Date</b></label>
@@ -196,6 +196,90 @@
                                         <input class="form-check-input" type="checkbox" value="" id="formColouring">
                                         <label class="form-check-label" for="formColouring">Hydrotherapy</label>
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="formExpert"><b>Expert</b></label>
+                                        <p>Select the professionnal you prefer</p>
+                                        <select name="expert" id="expert" class="input">     
+                                        <option>Jake Prinston</option>
+                                        <option>Morgan Dave</option>  
+                                        <option>John Doe</option>     
+                                        <option>Marie Van </option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="formPayment"><b>Payment</b></label>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                           <div class="form-group">
+                                              <label for="nameCreditCard">Name</label>
+                                              <div class="input-group">
+                                                 <input class="form-control" id="nameCreditCard" type="text" placeholder="Enter your name" title="This can be found on your credit card">
+                                                 <div class="input-group-append">
+                                                    <span class="input-group-text">
+                                                    <i class="material-icons md-18">card owner</i>
+                                                    </span>
+                                                 </div>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                           <div class="form-group">
+                                              <label for="ccnumber">Credit Card Number</label>
+                                              <div class="input-group">
+                                                 <input class="form-control" id="creditCard" maxlength="19" type="text" placeholder="0000 0000 0000 0000" autocomplete="email" title="This can be found on your credit card">
+                                                 <div class="input-group-append">
+                                                    <span class="input-group-text">
+                                                    <i class="material-icons md-18">credit_card</i>
+                                                    </span>
+                                                 </div>
+                                              </div>
+                                           </div>
+                                        </div>
+                                     </div>
+                                     <div class="row">
+                                        <div class="form-group col-sm-4">
+                                           <label for="ccmonth">Month</label>
+                                           <select class="form-control" id="ccmonth">
+                                              <option>1</option>
+                                              <option>2</option>
+                                              <option>3</option>
+                                              <option>4</option>
+                                              <option>5</option>
+                                              <option>6</option>
+                                              <option>7</option>
+                                              <option>8</option>
+                                              <option>9</option>
+                                              <option>10</option>
+                                              <option>11</option>
+                                              <option>12</option>
+                                           </select>
+                                        </div>
+                                        <div class="form-group col-sm-4">
+                                           <label for="ccyear">Year</label>
+                                           <select class="form-control" id="ccyear">
+                                              <option>2014</option>
+                                              <option>2015</option>
+                                              <option>2016</option>
+                                              <option>2017</option>
+                                              <option>2018</option>
+                                              <option>2019</option>
+                                              <option>2020</option>
+                                              <option>2021</option>
+                                              <option>2022</option>
+                                              <option>2023</option>
+                                              <option>2024</option>
+                                              <option>2025</option>
+                                           </select>
+                                        </div>
+                                        <div class="col-sm-4">
+                                           <div class="form-group">
+                                              <label for="cvv">CVV/CVC</label>
+                                              <input class="form-control" maxlength="3" id="cvv" type="text" placeholder="123" title="CVV is the last three digits on the back of your credit card">
+                                           </div>
+                                        </div>
                                 </div>
                                 <button type="submit" class="btn btn-outline-success float-right">Submit</button>
                             </form>
